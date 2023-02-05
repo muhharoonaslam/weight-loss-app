@@ -1,0 +1,36 @@
+<div class="bg-white fixed bottom-0 w-full flex pb-5 pt-5">
+    <a routerLink="/" routerLinkActive="active" class="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-indigo-500">
+        <div class="text-center">
+            <span class="block h-8 text-3xl leading-8">
+                <i class="mdi mdi-home-variant"></i>
+            </span>
+        </div>
+    </a>
+    <a routerLink="/history" routerLinkActive="active" class="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-indigo-500">
+        <div class="text-center">
+            <span class="block h-8 text-3xl leading-8">
+                <i class="mdi mdi-poll"></i>
+            </span>
+        </div>
+    </a>
+
+    <button (click)="openModal()" class="p-0 w-14 h-14 rounded-full absolute fab bg-indigo-500 shadow text-white mouse transition ease-in duration-200 ">
+        <i class="mdi mdi-plus text-3xl"></i>
+    </button>
+
+    <a href="#" class="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-indigo-500">
+        <div class="text-center">
+            <span class="block h-8 text-3xl leading-8">
+                <i class="mdi mdi-chat-outline "></i>
+            </span>
+        </div>
+    </a>
+    <a href="#" class="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-indigo-500">
+        <div class="text-center">
+            <span class="block h-8 text-3xl leading-8">
+                <i class="mdi mdi-account-outline"></i>
+            </span>
+        </div>
+    </a>
+</div>
+<app-weight-modal *ngIf="showModal" [weight]="weight" [age]="age" [gender]="gender" (close)="closeModal()" (weightChange)="updateWeight($event)"></app-weight-modal>

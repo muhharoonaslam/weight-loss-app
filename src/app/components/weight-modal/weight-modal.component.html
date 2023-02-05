@@ -1,0 +1,47 @@
+<div class="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 modal" [@modalState]="modalState"></div>
+<div class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center modal " [@modalState]="modalState">
+    <div class="w-11/12 max-w-md bg-white rounded-lg shadow-lg full-width-height">
+        <div class="p-8 ">
+
+            <div class=" text-gray-800 overflow-hidden relative flex container ">
+                <div class="  h-full w-full pb-6 overflow-y-auto ">
+                    <div class="header">
+
+                        <h1 class="text-3xl font-bold ">
+                            <i class="mdi mdi-chevron-left text-3xl text-gray-500 hover:text-gray-600" (click)="closeModal()"></i> Add Weight
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-6">
+                <div class="weight-card">{{weight}}</div>
+                <div class="relative text-center mt-4">
+                    <input type="range" class="dial-input" [formControl]="dialControl" (input)="updateWeight($event)" min="0" max="360" />
+                </div>
+            </div>
+        </div>
+        <div class="details p-8 ">
+            <div class="mb-6">
+                <div class="flex items-center justify-between text-gray-500 cursor-pointer space-x-3 ">
+                    <label for="option0" class="bg-white radio-option cursor-pointer w-1/2 flex items-center justify-center truncate uppercase select-none text-lg rounded-full p-2 shadow-lg">Male</label>
+                    <label for="option1" class="bg-white  radio-option selected cursor-pointer w-1/2 flex items-center justify-center truncate uppercase select-none  text-lg rounded-full p-2 ">Female</label>
+                </div>
+            </div>
+            <div class="flex items-center justify-between text-gray-500 cursor-pointer space-x-3 ">
+                <div class="bg-white w-1/2 p-5  rounded-lg shadow-lg flex-row items-center justify-center font-semibold">
+                    <h3 class="text-lg font-medium flex justify-between mb-8 text-gray-800">Age <i class="mdi mdi-cog-outline"></i></h3>
+                    <p class="text-gray-800 text-4xl text-center font-normal">{{ age }}</p>
+                </div>
+                <div class="bg-white w-1/2 p-5  rounded-lg shadow-lg flex-row items-center justify-center font-semibold">
+                    <h3 class="text-lg font-medium flex justify-between mb-8 text-gray-800">Height <i class="mdi mdi-cog-outline"></i></h3>
+                    <p class="text-gray-800 text-4xl text-center font-normal">173</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 mt-4">
+                <button (click)="closeModal()" class="text-center text-white button-save inline-flex justify-center w-full items-center p-4 bg-gray-200 hover:bg-gray-300 text-lg font-medium rounded-lg">
+                  Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

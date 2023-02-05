@@ -1,0 +1,13 @@
+.main-container {
+    border-radius: 1rem;
+    padding: 20px;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.play-button {
+    color: #C2FF4F;
+}

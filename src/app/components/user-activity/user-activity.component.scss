@@ -1,0 +1,29 @@
+.card-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.card {
+    // scroll-snap-align: start;
+    animation: slide-in 1s ease-out forwards;
+}
+
+.bar-green {
+    background-color: #C2FF4F
+}
+
+.bar-background {
+    background-color: #F2F0FE
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
